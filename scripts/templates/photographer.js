@@ -24,7 +24,7 @@ export function photographerTemplate(data) {
     pricey.textContent = `${price}€/jour`;
 
     const link = document.createElement("a");
-    link.setAttribute("href", `photographer.html?id=${id}name=${name}`);
+    link.setAttribute("href", `photographer.html?id=${id}&name=${name}`);
 
     article.appendChild(link);
     link.appendChild(img);
