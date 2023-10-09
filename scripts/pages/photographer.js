@@ -111,7 +111,6 @@ function sortDate(mediaPhotographer) {
   mediaPhotographer.sort((a, b) => new Date(b.date) - new Date(a.date));
   return mediaPhotographer;
 }
-
 function sortTitle(mediaPhotographer) {
     mediaPhotographer.sort((a, b) => a.title.localeCompare(b.title));
     return mediaPhotographer;
