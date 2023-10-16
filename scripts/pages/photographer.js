@@ -279,20 +279,18 @@ function lightboxContent(mediaPhotographer, e) {
     body.style.overflow = "auto"; //  to re-enable scrolling
   });
 
-  let media =
-    e.tagName === "VIDEO"
-      ? document.createElement("video")
-      : document.createElement("img");
+  let media = e.tagName === "VIDEO"? document.createElement("video"):document.createElement("img");
   media.setAttribute("src", e.src);
   media.setAttribute("alt", e.alt);
 
   if (e.tagName === "VIDEO") {
     media.setAttribute("controls", "controls");
     media.setAttribute("autoplay", "autoplay");
+    media.setAttribute("alt", e.getAttribute("alt")); 
   }
 
   let titleMedia = document.createElement("p");
-  titleMedia.textContent = e.alt;
+  titleMedia.textContent = e.getAttribute("alt");
 
   lightboxMedia.appendChild(media);
   lightboxMedia.appendChild(titleMedia);
@@ -313,7 +311,8 @@ function lightboxContent(mediaPhotographer, e) {
     clonedMedia.setAttribute("autoplay", "autoplay");
     clonedMedia.setAttribute("controls", "controls");
     lightboxMedia.appendChild(clonedMedia);
-    titleMedia.textContent = media.alt;
+    titleMedia.textContent = media.getAttribute("alt");
+    lightboxMedia.appendChild(titleMedia);
   });
 
   previous.addEventListener("click", () => {
@@ -329,7 +328,8 @@ function lightboxContent(mediaPhotographer, e) {
     clonedMedia.setAttribute("autoplay", "autoplay");
     clonedMedia.setAttribute("controls", "controls");
     lightboxMedia.appendChild(clonedMedia);
-    titleMedia.textContent = media.alt;
+    titleMedia.textContent = media.getAttribute("alt");
+    lightboxMedia.appendChild(titleMedia);
   });
 
   document.addEventListener("keydown", (event) => {
