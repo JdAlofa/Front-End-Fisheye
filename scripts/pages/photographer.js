@@ -11,7 +11,7 @@ async function getPhotographers() {
 // CREATING THE USER CARD IN THE HEADER OF THE PAGE
 function getUserCard(photographer) {
   const { name, portrait, city, country, tagline } = photographer;
-  const picture = `../../FishEye_Photos/Sample Photos/Photographers ID Photos/${portrait}`;
+  const picture = `./FishEye_Photos/Sample Photos/Photographers ID Photos/${portrait}`;
 
   const div = document.createElement("div");
   div.classList.add("photographerInfo");
@@ -53,7 +53,7 @@ function createPictureCard(mediaPhotographer, counter) {
 
     mediaElement.setAttribute(
       "src",
-      `../../FishEye_Photos/Sample Photos/${ogName}/${video}`
+      `./FishEye_Photos/Sample Photos/${ogName}/${video}`
     );
     mediaElement.setAttribute("alt", title);
     mediaElement.classList.add("mediaElement");
@@ -62,7 +62,7 @@ function createPictureCard(mediaPhotographer, counter) {
     mediaElement = document.createElement("img");
     mediaElement.setAttribute(
       "src",
-      `../../FishEye_Photos/Sample Photos/${ogName}/${image}`
+      `./FishEye_Photos/Sample Photos/${ogName}/${image}`
     );
     mediaElement.setAttribute("alt", title);
     mediaElement.classList.add("mediaElement");
@@ -88,11 +88,11 @@ function createPictureCard(mediaPhotographer, counter) {
 
   const like = document.createElement("img");
   like.classList.add("like");
-  like.setAttribute("src", "../../assets/icons/heart.svg");
+  like.setAttribute("src", "./assets/icons/heart.svg");
 
   const likeEmpty = document.createElement("img");
   likeEmpty.classList.add("likeEmpty");
-  likeEmpty.setAttribute("src", "../../assets/icons/heart empty.svg");
+  likeEmpty.setAttribute("src", "./assets/icons/heart empty.svg");
 
   article.appendChild(mediaContainer);
   mediaContainer.appendChild(mediaElement);
