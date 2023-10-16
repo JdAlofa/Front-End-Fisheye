@@ -1,2 +1,3 @@
-# Base de code du projet P6 - Parcours Front-end
+Photographer website displaying medias through dynamic dom rendering.
+Html,css, js 
 
