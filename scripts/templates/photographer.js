@@ -1,7 +1,7 @@
 export function photographerTemplate(data) {
   const { name, portrait, city, country, tagline, price,id } = data;
 
-  const picture = `../../FishEye_Photos/Sample Photos/Photographers ID Photos/${portrait}`;
+  const picture = `./FishEye_Photos/Sample Photos/Photographers ID Photos/${portrait}`;
 
   function getUserCardDOM() {
     const article = document.createElement("article");
